@@ -1,0 +1,73 @@
+ .pre-header{
+     background-color: #222222;
+     color: #fff;
+ }
+ .pre-header ul{
+    list-style: none;
+}
+.header{
+    background-color: #F0A83E;
+}
+.header nav ul {
+    list-style-image: url('../img/huella.png');
+}
+.main{
+    background-image: url('../img/background.png');
+    min-height: 409px;
+}
+.main h1{
+    color: #3C2313;
+    font-weight: 400;
+    background-size: 30px;
+    text-align: center;
+}
+.main p{
+    font-size: 16px;
+    text-align: center;
+}
+.main button{
+    display: block;
+    margin: 0 auto;
+    background-color: #F0A83E;
+    color: #fff;
+    padding: 15px 23px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.destacados .huella{
+    text-align: center;
+}
+.destacados h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.destacados nav ul{
+    padding-left: 0;
+}
+.destacados nav ul li{
+    list-style: none;
+    text-align: center;
+}
+.destacados nav ul li a{
+    font-size: 15px;
+}
+.destacados .productos span{
+    color: #F0A83E;
+}
+footer{
+    background-color: #3C2313;
+}
+footer h3{
+    color: #fff;
+}
+footer p{
+    color: #8A8787;
+}
+footer .copy-right{
+    background-color: #222222;
+}
+footer .copy-right p{
+    color: #fff;
+    text-align: center;
+}
