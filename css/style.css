@@ -1,29 +1,84 @@
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ body{
+     max-width: 1250px;
+     margin: 0 auto;
+     font-family: 'Roboto', sans-serif;
+ }
  .pre-header{
      background-color: #222222;
      color: #fff;
+     display: flex;
+     justify-content: space-between;
+     padding: 4px 90px;
+     align-items: center;
  }
  .pre-header ul{
     list-style: none;
+    display: flex;
+    font-weight: 400;
+}
+.pre-header p{
+    font-size: 12px;
+}
+.pre-header ul li{
+    margin: 0 5px;
+}
+.pre-header ul li a{
+    font-size: 12px;
+}
+.pre-header ul li img{
+    margin-left: 4px;
 }
 .header{
     background-color: #F0A83E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
 }
 .header nav ul {
     list-style-image: url('../img/huella.png');
+    display: flex;
+}
+.header nav ul li {
+    margin: auto 20px;
+}
+.header nav ul li a{
+    font-size: 13px;
+    color: #fff;
 }
 .main{
     background-image: url('../img/background.png');
     min-height: 409px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main div{
+    position: absolute;
+    transform: translate(-80%,-50%);
+    top: 50%;
+    left: 80%;
+    min-width: 365px;
 }
 .main h1{
     color: #3C2313;
     font-weight: 400;
+    font-size: 30px;
     background-size: 30px;
     text-align: center;
+    background-color: #fff;
+    padding: 9px 10px 10px;
 }
 .main p{
     font-size: 16px;
     text-align: center;
+    color: #3c2313;
+    margin: 12px auto;
 }
 .main button{
     display: block;
@@ -34,40 +89,86 @@
     border: none;
     outline: none;
     cursor: pointer;
+    font-size: 16px;
+}
+.destacados{
+    margin-top: 24px;
 }
 .destacados .huella{
     text-align: center;
+    margin-bottom: 10px;
 }
 .destacados h2 {
     text-align: center;
     font-size: 40px;
+    font-weight: 700;
 }
 .destacados nav ul{
     padding-left: 0;
+    display: flex;
+    justify-content: center;
 }
 .destacados nav ul li{
     list-style: none;
     text-align: center;
+    margin: auto 13px;
 }
 .destacados nav ul li a{
+    color: #666666;
     font-size: 15px;
+    font-weight: 400;
+}
+.destacados .productos{
+    margin: 49px auto 78px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 95px 8px 95px;
+}
+.destacados .productos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fbfaf6;
+    min-width: 263px;
+    padding-bottom: 4.45px;
 }
 .destacados .productos span{
     color: #F0A83E;
 }
 footer{
     background-color: #3C2313;
+    padding: 23px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 footer h3{
     color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+footer div div{
+    display: flex;
+    align-items: center;
+}
+footer .text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    align-items: flex-start;
 }
 footer p{
     color: #8A8787;
+    font-size: 10px;
 }
-footer .copy-right{
+.copy-right{
     background-color: #222222;
+    padding: 4px;
 }
-footer .copy-right p{
+.copy-right p{
     color: #fff;
+    font-weight: 700;
+    font-size: 12px;
     text-align: center;
 }
