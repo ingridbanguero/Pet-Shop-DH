@@ -1,88 +1,164 @@
- *{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
- body{
-     max-width: 1250px;
-     margin: 0 auto;
-     font-family: 'Roboto', sans-serif;
- }
- .pre-header{
-     background-color: #222222;
-     color: #fff;
-     display: flex;
-     justify-content: space-between;
-     padding: 4px 90px;
-     align-items: center;
- }
- .pre-header ul{
-    list-style: none;
-    display: flex;
-    font-weight: 400;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+/* Preheader */
+.pre-header{
+    display: none;
+}
+.pre-header{
+    background-color: #222222;
+    color: #fff;
+    justify-content: space-between;
+    padding: 4px 90px;
+    align-items: center;
+}
+.pre-header ul{
+   list-style: none;
+   display: flex;
+   font-weight: 400;
 }
 .pre-header p{
-    font-size: 12px;
+   font-size: 12px;
 }
 .pre-header ul li{
-    margin: 0 5px;
+   margin: 0 5px;
 }
 .pre-header ul li a{
-    font-size: 12px;
+   font-size: 12px;
 }
 .pre-header ul li img{
-    margin-left: 4px;
+   margin-left: 4px;
 }
-.header{
+/*Encabezado*/
+.header {
+    width: 100%;
     background-color: #F0A83E;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px;
-}
-.header nav ul {
-    list-style-image: url('../img/huella.png');
+    padding: 24px 20px;
+  }
+  .header div {
     display: flex;
-}
-.header nav ul li {
-    margin: auto 20px;
-}
-.header nav ul li a{
-    font-size: 13px;
+    justify-content: space-between; 
+  }
+  /*Menu hamburguesa*/
+  .header input {
+    display: none; 
+  }
+  
+  .header .menu-icon {
+    padding: 20px 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  .header .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+  }
+  .header .menu-icon .nav-icon:before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+  }
+  .header .menu-icon .nav-icon:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -5px;
+  }
+  .header input:checked ~  .menu-icon .nav-icon{
+    background: transparent;
+  }
+  .header input:checked ~  .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .header input:checked ~  .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /*Barra de navegación*/
+.header nav {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background: #F0A83E;
+    width: 100%;
+    display: none;
+    z-index: 2; 
+  }
+  .header nav ul {
+    margin: 0;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px; 
+  }
+  .header nav ul li a {
     color: #fff;
-}
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none; 
+  }
+  .header input:checked ~ nav {
+    display: block;
+  }
+
+/* Imagen principal */
 .main{
     background-image: url('../img/background.png');
-    min-height: 409px;
+    height: 440px;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .main div{
     position: absolute;
-    transform: translate(-80%,-50%);
+    transform: translate(-50%,-50%);
     top: 50%;
-    left: 80%;
+    left: 50%;
     min-width: 365px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .main h1{
     color: #3C2313;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
     background-size: 30px;
     text-align: center;
     background-color: #fff;
-    padding: 9px 10px 10px;
+    padding: 12px 38px;
 }
 .main p{
     font-size: 16px;
-    text-align: center;
     color: #3c2313;
-    margin: 12px auto;
+    margin: 12px 0px;
 }
 .main button{
-    display: block;
-    margin: 0 auto;
     background-color: #F0A83E;
     color: #fff;
     padding: 15px 23px;
@@ -90,6 +166,7 @@
     outline: none;
     cursor: pointer;
     font-size: 16px;
+    margin-right: 30px;
 }
 .destacados{
     margin-top: 24px;
@@ -100,13 +177,16 @@
 }
 .destacados h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
+    width: 50%;
+    margin: 0 auto;
 }
 .destacados nav ul{
     padding-left: 0;
     display: flex;
     justify-content: center;
+    margin-top: 26px;
 }
 .destacados nav ul li{
     list-style: none;
@@ -121,8 +201,10 @@
 .destacados .productos{
     margin: 49px auto 78px auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0 95px 8px 95px;
+    align-items: center;
 }
 .destacados .productos div{
     display: flex;
@@ -131,6 +213,7 @@
     background-color: #fbfaf6;
     min-width: 263px;
     padding-bottom: 4.45px;
+    margin: 20px 20px;
 }
 .destacados .productos span{
     color: #F0A83E;
@@ -139,6 +222,7 @@ footer{
     background-color: #3C2313;
     padding: 23px 70px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
@@ -151,6 +235,7 @@ footer h3{
 footer div div{
     display: flex;
     align-items: center;
+    margin: 20px 0px;
 }
 footer .text{
     display: flex;
@@ -165,10 +250,50 @@ footer p{
 .copy-right{
     background-color: #222222;
     padding: 4px;
+    font-size: 12px;
 }
 .copy-right p{
     color: #fff;
     font-weight: 700;
     font-size: 12px;
     text-align: center;
+}
+
+/*Media queries*/
+@media (min-width: 768px) {
+    .pre-header{
+        display: flex;
+    }
+    /* Mostrar de navegación*/
+    .header nav{
+        display: block;
+        position: relative;
+        top: 0;
+    }
+    .header nav ul{
+        flex-direction: row;
+    }
+    .header .menu-icon{
+        display: none;
+    }
+    .main{
+        height: 500;
+    }
+    .main div{
+        transform: translate(-80%,-50%);
+        left: 80%;
+        align-items: center;
+    }
+    .main h1{
+        padding: 9px 10px 10px;
+    }
+    .main button{
+        margin-right: 0;
+    }
+    footer{
+        flex-direction: row;
+    }
+    footer .content{
+        order: -1;
+    }
 }
